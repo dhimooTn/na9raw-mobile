@@ -1,0 +1,95 @@
+name: mobile
+description: "Na9raw E-learning mobile app"
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # 🔹 Navigation
+  go_router: ^16.3.0
+
+  # 🔹 State Management
+  provider: ^6.1.2
+
+  # 🔹 Firebase Core (required for all Firebase services)
+  firebase_core: ^4.2.0
+
+  # 🔹 Firebase Authentication
+  firebase_auth: ^6.1.1
+
+  # 🔹 Cloud Firestore (database)
+  cloud_firestore: ^6.0.3
+
+  # 🔹 Firebase Storage (optional, for uploading course images/files)
+  firebase_storage: ^13.0.3
+
+  # 🔹 Fonts (Google Fonts helper)
+  google_fonts: ^6.2.1
+
+  # 🔹 SVG support (for vector icons and logos)
+  flutter_svg: ^2.0.9
+
+  flutter_native_splash: ^2.4.7
+  url_launcher: ^6.3.2
+  google_sign_in: ^6.3.0
+  font_awesome_flutter: ^10.7.0
+  file_picker: ^10.3.7
+  image_picker: ^1.2.1
+  video_player: ^2.10.1
+  dio: ^5.9.0
+  flutter_dotenv: ^6.0.0
+  crypto: ^3.0.0
+  http: ^1.2.0
+  webview_flutter: ^4.4.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: "^0.14.4"
+
+flutter:
+  uses-material-design: true
+
+  # 🔹 Assets (ensure trailing slash for folder)
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/images/splash/
+    - .env
+
+flutter_native_splash:
+  android: true
+  ios: true
+  web: true
+
+  # Slightly lighter blue for better contrast with the "9"
+  color: "#1565C0"
+
+  image: assets/images/splash/na9raw_logo.png
+
+  android_gravity: center
+  ios_content_mode: center
+  web_image_mode: center
+  fullscreen: true
+
+  android_12:
+    color: "#1565C0"
+    image: assets/images/splash/na9raw_logo.png
+    icon_background_color: "#1565C0"
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app.png"
+  adaptive_icon_path: "assets/icons/app.png"
+  image_path_ios: "assets/icons/app.png"
+  remove_alpha_ios: true
+  adaptive_icon_background_color: "#FFFFFF"
+  adaptive_icon_foreground_color: "assets/icons/app.png"
+  adaptive_icon_padding: true
